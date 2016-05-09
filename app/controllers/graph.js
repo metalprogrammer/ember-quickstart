@@ -14,7 +14,6 @@ export default Ember.Controller.extend({
 					{
 						label: "Stock Data",
 						fill: true,
-   
 						data: this.get("model.listofdata").mapBy("average"),
 					}
 				]

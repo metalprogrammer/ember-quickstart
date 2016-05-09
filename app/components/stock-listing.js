@@ -8,7 +8,7 @@ export default Ember.Component.extend({
 	{
 		var list = [];
 		var s = this.get('search');
-		var rx = new RegExp(s, 'gi');
+		var rx = new RegExp(s, 'ig');
 		var tempList = this.get("stocks.listofstocks");
 		var size = this.get("stocks.listofstocks.length");
 		
@@ -17,7 +17,7 @@ export default Ember.Component.extend({
 			var stockObj = tempList.objectAt(i);
 			var name = tempList.objectAt(i).get("name");
 			
-			if(name[0] !== s[0])
+			if(name[0].toUpperCase()  !== s[0].toUpperCase() )
 			{
 				continue;
 			}
@@ -26,7 +26,7 @@ export default Ember.Component.extend({
 			{
 				list.push(stockObj);
 			}
-			if(name[0] > s[0])
+			if(name[0].toUpperCase()  > s[0].toUpperCase() )
 			{
 				break;
 			}
