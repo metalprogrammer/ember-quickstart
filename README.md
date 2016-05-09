@@ -7,7 +7,7 @@ Besides Ember following dependencies are needed. <br>
 [Ember Data](https://github.com/emberjs/data)<br>
 =Used for ember models<br>
 <br>
-[Ember Chart JS](https://github.com/aomran/ember-cli-chart_)<br>
+[Ember Chart JS](https://github.com/aomran/ember-cli-chart)<br>
 =To display the charts<br>
 <br>
 Back end<br>
@@ -20,4 +20,4 @@ Then in ember-quickstart run:<br>
 ember serve<br>
 And then go to <br>
 http://localhost:4200/stocks/<br>
-The app will talk to the back-end which is located at http://localhost:8080. <br>
+The app will talk to the back-end which is located at (http://localhost:8080). <br>
