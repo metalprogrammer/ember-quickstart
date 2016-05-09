@@ -1,53 +1,26 @@
-# Ember-quickstart
+<b>Set up</b>
+Besides Ember following dependencies are needed. 
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Ember-inflector
+=For some ember naming stuff
+https://github.com/stefanpenner/ember-inflector
 
-## Prerequisites
+Ember Data
+=Used for ember models
+https://github.com/emberjs/data
 
-You will need the following things properly installed on your computer.
+Ember Chart JS
+=To display the charts
+https://github.com/aomran/ember-cli-chart
 
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+Back end
+The back end project is located at:
 
-## Installation
+<b>Start up</b>
 
-* `git clone <repository-url>` this repository
-* change into the new directory
-* `npm install`
-* `bower install`
-
-## Running / Development
-
-* `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+First start up the back-end. 
+Then in ember-quickstart run:
+ember serve
+And then go to 
+http://localhost:4200/stocks/
+The app will talk to the back-end which is located at http://localhost:8080. 
