@@ -1,0 +1,20 @@
+<h2>{{title}}</h2>
+
+<aside>
+<label>StockPre:</label>
+{{input type="text" value=search placeholder="Search for a stock:" key-up=(action 'filteredContent' bubbles=false ) }}
+
+
+<table>
+  {{#each filteredList as |stock|}}
+	{{#link-to "graph"  stock.symbol tagName="tr" current-when="graph"}}
+     <td>{{stock.name}}</td>
+	{{/link-to}}
+  {{/each}}
+</table>
+</aside>
+
+
+<section class="main">
+  {{outlet}}
+</section>
