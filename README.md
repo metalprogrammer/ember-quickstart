@@ -1,20 +1,19 @@
 <b>Set up</b>
 Besides Ember following dependencies are needed. 
 
-Ember-inflector
+[Ember-inflector](https://github.com/stefanpenner/ember-inflector)
 =For some ember naming stuff
-https://github.com/stefanpenner/ember-inflector
 
-Ember Data
+[Ember Data](https://github.com/emberjs/data)
 =Used for ember models
-https://github.com/emberjs/data
 
-Ember Chart JS
+
+[Ember Chart JS](https://github.com/aomran/ember-cli-chart_)
 =To display the charts
-https://github.com/aomran/ember-cli-chart
+
 
 Back end
-The back end project is located at:
+The back end project is located [here](https://github.com/metalprogrammer/RubyBackEndStockProject/)
 
 <b>Start up</b>
 
