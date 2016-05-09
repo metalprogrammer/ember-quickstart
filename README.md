@@ -19,5 +19,5 @@ First start up the back-end. <br>
 Then in ember-quickstart run:<br>
 ember serve<br>
 And then go to <br>
-http://localhost:4200/stocks/<br>
-The app will talk to the back-end which is located at (http://localhost:8080). <br>
+<a href="http://localhost:4200/stocks/">http://localhost:4200/stocks/</a> <br>
+The app will talk to the back-end which is located at <a href="http://localhost:8080/stocks/">http://localhost:8080/stocks/</a>. <br>
