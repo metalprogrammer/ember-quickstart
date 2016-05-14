@@ -3,8 +3,14 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
 	search: null,
-	actions: {
-    filteredContent() 
+	actions: 
+	{
+		onFilterTextChange()
+		{
+			Ember.run.debounce(this, this.filteredContent, 1500);
+		}
+	},
+   filteredContent:function()
 	{
 		var list = [];
 		var s = this.get('search');
@@ -34,5 +40,4 @@ export default Ember.Component.extend({
 		this.set('filteredList', list);
 		
     }
-  }
 });
