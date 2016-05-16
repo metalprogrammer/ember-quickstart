@@ -1,6 +1,5 @@
 import Ember from 'ember';
 
-
 export default Ember.Component.extend({
 	search: null,
 	actions: 
@@ -10,6 +9,10 @@ export default Ember.Component.extend({
 			Ember.run.debounce(this, this.filteredContent, 1500);
 		}
 	},
+
+  // binding the property on the paged array
+  // to a property on the controller
+  totalPagesBinding: "pagedContent.totalPages",
    filteredContent:function()
 	{
 		var list = [];
