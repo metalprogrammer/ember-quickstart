@@ -1,20 +1,40 @@
 <h2>{{title}}</h2>
 
-<aside>
 <label>StockPre:</label>
 {{input type="text" value=search placeholder="Search for a stock:" key-up=(action 'onFilterTextChange' ) }}
 
+<span class="secondary badge">2</span>
+<span class="success badge">3</span>
+<span class="alert badge">A</span>
+<span class="warning badge">B</span>
 
-<table>
-  {{#each filteredList as |stock|}}
-	{{#link-to "graph"  stock.symbol tagName="tr" current-when="graph"}}
-     <td>{{stock.name}}</td>
-	{{/link-to}}
-  {{/each}}
-</table>
-</aside>
+<div class="row">
+  <div class="small-5 columns">
+  
+{{#zf-accordion-menu}}
+  <li>
+    <a href="#">Item 1</a>
+    <ul class="menu vertical nested">
+	  {{#each filteredList as |stock|}}
+		{{#link-to "graph"  stock.symbol tagName="tr" current-when="graph"}}
+		 <li>{{stock.name}}</li>
+		{{/link-to}}
+	  {{/each}}
+      <li><a href="#">Item 1A</a></li>
+      <li><a href="#">Item 1B</a></li>
+    </ul>
+  </li>
+  <li><a href="#">Item 2</a></li>
+{{/zf-accordion-menu}}
+</div>
 
+
+<div class="small-7 columns">
 
 <section class="main">
   {{outlet}}
 </section>
+
+</div>
+</div>
+
