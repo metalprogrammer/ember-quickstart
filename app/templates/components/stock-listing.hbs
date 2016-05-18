@@ -1,7 +1,7 @@
 <div class="top-bar">
     <div class="top-bar-left">
         <ul class="dropdown menu" data-dropdown-menu>
-            <li class="menu-text">Site Title</li>
+            <li class="menu-text">Stock Search</li>
         </ul>
     </div>
     <div class="top-bar-right">
@@ -13,11 +13,21 @@
 
 <h2>{{title}}</h2>
 
-<span class="secondary badge">2</span>
-<span class="success badge">3</span>
-<span class="alert badge">A</span>
-<span class="warning badge">B</span>
-
+<!-- Some Fun with Foundation -->
+<!-- This looks cool but might be hard to see for some so we will leave both titles up -->
+<!-- Little extra color can't be bad -->
+<span class="secondary badge">S</span>
+<span class="success badge">T</span>
+<span class="alert badge">O</span>
+<span class="warning badge">C</span>
+<span class="secondary badge">K</span>
+<span class="success badge">_</span>
+<span class="alert badge">S</span>
+<span class="warning badge">E</span>
+<span class="secondary badge">A</span>
+<span class="success badge">R</span>
+<span class="alert badge">C</span>
+<span class="warning badge">H</span>
 
 <div class="row">
     <div class="small-5 columns">
@@ -29,6 +39,7 @@
                 <table class="hover">
                     {{#each filteredList as |stock|}} {{#link-to "graph" stock.symbol tagName="tr" current-when="graph"}}
                     <td>{{stock.name}}</td>
+					<td>{{stock.symbol}}</td>
                     {{/link-to}} {{/each}}
                 </table>
             </ul>
