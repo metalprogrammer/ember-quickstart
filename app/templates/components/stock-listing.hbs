@@ -1,14 +1,14 @@
 <div class="top-bar">
-  <div class="top-bar-left">
-    <ul class="dropdown menu" data-dropdown-menu>
-      <li class="menu-text">Site Title</li>
-    </ul>
-  </div>
-  <div class="top-bar-right">
-    <ul class="menu">
-      <li>{{input type="text" value=search placeholder="Search for a stock:" key-up=(action 'onFilterTextChange' ) }}</li>
-    </ul>
-  </div>
+    <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+            <li class="menu-text">Site Title</li>
+        </ul>
+    </div>
+    <div class="top-bar-right">
+        <ul class="menu">
+            <li>{{input type="text" value=search placeholder="Search for a stock:" key-up=(action 'onFilterTextChange' ) }}</li>
+        </ul>
+    </div>
 </div>
 
 <h2>{{title}}</h2>
@@ -20,31 +20,28 @@
 
 
 <div class="row">
-  <div class="small-5 columns">
-  
-{{#zf-accordion-menu}}
-  <li>
-    <a href="#">Search Results</a>
-    <ul class="menu vertical nested">
-	  <table class="hover">
-		  {{#each filteredList as |stock|}}
-			{{#link-to "graph"  stock.symbol tagName="tr" current-when="graph"}}
-			 <td>{{stock.name}}</td>
-			{{/link-to}}
-		  {{/each}}
-		</table>
-    </ul>
-  </li>
-{{/zf-accordion-menu}}
+    <div class="small-5 columns">
+
+        {{#zf-accordion-menu}}
+        <li>
+            <a href="#">Search Results</a>
+            <ul class="menu vertical nested">
+                <table class="hover">
+                    {{#each filteredList as |stock|}} {{#link-to "graph" stock.symbol tagName="tr" current-when="graph"}}
+                    <td>{{stock.name}}</td>
+                    {{/link-to}} {{/each}}
+                </table>
+            </ul>
+        </li>
+        {{/zf-accordion-menu}}
+    </div>
+
+
+    <div class="small-7 columns">
+
+        <section class="main">
+            {{outlet}}
+        </section>
+
+    </div>
 </div>
-
-
-<div class="small-7 columns">
-
-<section class="main">
-  {{outlet}}
-</section>
-
-</div>
-</div>
-

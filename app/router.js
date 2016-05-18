@@ -2,18 +2,22 @@ import Ember from 'ember';
 import config from './config/environment';
 
 const Router = Ember.Router.extend({
-  location: config.locationType
+    location: config.locationType
 });
 
 Router.map(function() {
-	this.route('index');
+    this.route('index');
 
-  this.route('stocks', {path: 'stocks/:search'},function() 
-    {
-        this.route('graph',{path: 'graph/:stock',   resetNamespace: true });
+    this.route('stocks', {
+        path: 'stocks/:search'
+    }, function() {
+        this.route('graph', {
+            path: 'graph/:stock',
+            resetNamespace: true
+        });
     });
-	
-  this.route('dynamicUpdate');
+
+    this.route('dynamicUpdate');
 });
 
 export default Router;
