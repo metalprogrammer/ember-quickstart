@@ -6,10 +6,17 @@ export default Ember.Component.extend({
 	{
 		onFilterTextChange()
 		{
-			Ember.run.debounce(this, this.filteredContent, 1500);
+			Ember.run.debounce(this, this.sendUpdateModelAction, 1500);
+			
 		}
 	},
 
+	sendUpdateModelAction()
+	{
+		this.sendAction('action', this.get('search'));
+		this.filteredContent();
+	},
+	
   // binding the property on the paged array
   // to a property on the controller
   totalPagesBinding: "pagedContent.totalPages",
@@ -26,19 +33,7 @@ export default Ember.Component.extend({
 			var stockObj = tempList.objectAt(i);
 			var name = tempList.objectAt(i).get("name");
 			
-			if(name[0].toUpperCase()  !== s[0].toUpperCase() )
-			{
-				continue;
-			}
-			
-			if(name.match(rx))
-			{
-				list.push(stockObj);
-			}
-			if(name[0].toUpperCase()  > s[0].toUpperCase() )
-			{
-				break;
-			}
+			list.push(stockObj);
 		}
 		this.set('filteredList', list);
 		

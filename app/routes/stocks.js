@@ -2,11 +2,17 @@ import Ember from 'ember';
 
 
 export default Ember.Route.extend({
-	model() 
+	lastSearchParam: "stockList",
+	model(param) 
 	{
-		//return ["a","b","c"];
-		return this.store.find('stocklisting',"stockList");
-	}
+		return this.store.find('stocklisting',param.search);
+	},
+  setupController: function(controller, model) {
+	  console.log("setip");
+    controller.set('params', this.get('params'));
+    this._super(controller, model);
+  }
+	
   
   
 });

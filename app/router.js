@@ -6,10 +6,13 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('stocks', function() 
+	this.route('index');
+
+  this.route('stocks', {path: 'stocks/:search'},function() 
     {
         this.route('graph',{path: 'graph/:stock',   resetNamespace: true });
     });
+	
   this.route('dynamicUpdate');
 });
 
