@@ -1,5 +1,4 @@
 # EmberStockFrotEnd
-[![Gem Version](https://img.shields.io/gem/v/comfortable_mexican_sofa.svg?style=flat)](http://rubygems.org/gems/comfortable_mexican_sofa) [![Gem Downloads](https://img.shields.io/gem/dt/comfortable_mexican_sofa.svg?style=flat)](http://rubygems.org/gems/comfortable_mexican_sofa) [![Build Status](https://img.shields.io/travis/comfy/comfortable-mexican-sofa.svg?style=flat)](https://travis-ci.org/comfy/comfortable-mexican-sofa) [![Dependency Status](https://img.shields.io/gemnasium/comfy/comfortable-mexican-sofa.svg?style=flat)](https://gemnasium.com/comfy/comfortable-mexican-sofa) [![Code Climate](https://img.shields.io/codeclimate/github/comfy/comfortable-mexican-sofa.svg?style=flat)](https://codeclimate.com/github/comfy/comfortable-mexican-sofa) [![Coverage Status](https://img.shields.io/coveralls/comfy/comfortable-mexican-sofa.svg?style=flat)](https://coveralls.io/r/comfy/comfortable-mexican-sofa?branch=master)
 
 A front end to search and display Stock Graphs in Ember Js.
 
@@ -12,25 +11,39 @@ A front end to search and display Stock Graphs in Ember Js.
 Download  [Node js and NPM](https://nodejs.org/en/)
 
 Dependencies
+Node JS
+NPM
+Ember JS
+Bower PackageManager
 [Ember-inflector](https://github.com/stefanpenner/ember-inflector)<br>
-<br>
 [Ember Data](https://github.com/emberjs/data)<br>
-<br>
 [Ember Chart JS](https://github.com/aomran/ember-cli-chart)<br>
-<br>
+[Ember Foundation JS](https://www.npmjs.com/package/ember-cli-foundation-6-sass)<br>
 
-Run the following commands to install dependencies 
+
+Run the following commands to install dependencies in (parentPath)\ember-quickstart\
 
 	npm install -g ember-cli
+	npm install -g bower
+	bower install 
+	bower install ember --save
     npm install --save ember-inflector
     ember install ember-data
 	ember install ember-cli-chart
-	ember g ember-cli-foundation-6-sass
+	npm install --save-dev ember-cli-sass
+	ember install ember-cli-foundation-6-sass 
+	(If asked to overwrite app\styles\app\scss enter Y)
+	
+If the last step hangs on "Installing packages for tooling via npm" you can cancel the operation and use the following steps:
+
+	npm install ember-cli --save
+	npm install
+	bower install
 
 
 
 Back end<br>
-The back end project is located [here](https://github.com/metalprogrammer/RubyBackEndStockProject/)<br>
+The back end project is located [here](https://github.com/metalprogrammer/CPPStockBackend)<br>
 
 
 
@@ -41,4 +54,6 @@ First start the frontend (see the apporiate readme).
 
 	cd (parentPath)\ember-quickstart\app
 	ember serve
+	
+In your favorite browser go to [http://localhost:4200/stocks](http://localhost:4200/stocks). 
 	
