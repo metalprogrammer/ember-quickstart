@@ -9,7 +9,7 @@ Router.map(function() {
     this.route('index');
 
     this.route('stocks', {
-        path: 'stocks/:search'
+        path: '/stocks'
     }, function() {
         this.route('graph', {
             path: 'graph/:stock',

@@ -39,7 +39,7 @@
                 <table class="hover">
                     {{#each filteredList as |stock|}} {{#link-to "graph" stock.symbol tagName="tr" current-when="graph"}}
                     <td>{{stock.name}}</td>
-					<td>{{stock.symbol}}</td>
+                    <td>{{stock.symbol}}</td>
                     {{/link-to}} {{/each}}
                 </table>
             </ul>
